@@ -131,7 +131,7 @@ def validate_id(ids, u_id):
 def read_db(name):
     """
     Принимает название файла
-    Возвращает данные из бд в виде python обьектов
+    Возвращает данные из БД в виде python обьектов
     """
     import json
     with open(name, "r") as file:

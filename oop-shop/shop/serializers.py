@@ -26,3 +26,5 @@ class CommentSerializer(BaseSerializer):
         dict_ = super().serialize_obj(obj)
         dict_['user'] = obj.user.email
         dict_['created_at'] = obj.created_at.strftime('%d.%m.%Y %H:%M:%S')
+
+        

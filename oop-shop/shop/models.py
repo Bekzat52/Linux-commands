@@ -11,13 +11,19 @@ class Category:
 class Product:
     object = []
     __id = 0
-    def __init__(self,title,price,description,quantity, category):
+    colors = ('gold', 'black', 'blue', 'white')
+    def __init__(self,title,price,description,quantity, category, color):
         self.id = Product.__id
         self.title = title
         self.price = price
         self.desc = description
         self.quantity = quantity
         self.category = category
+        if color in Product.colors:
+            self.color = color
+        else:
+            raise Exception('Product "color" is not valid')
+
         Product.object.append(self)
         Product.__id +=1
 

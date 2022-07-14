@@ -15,6 +15,9 @@ def product_create():
     price = input("Введите цену:")
     desc = input("Введите описание:")
     quantity = input("Введите кол-во:")
+    color = input (f'Введите цвет  {Product.colors}: ')
+
+    cat_title = input(f'Выберите категорию {[cat.title for cat in Category.objects]}: ')
 
     print('Выберите категорию:')
     for cat in Category.object:

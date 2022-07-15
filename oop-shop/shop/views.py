@@ -2,7 +2,7 @@ from abstract.utils import get_obj_or_404
 
 from  account.models import User
 from .models import Category,Product, Comment
-from .serializers import ProductSerializer, CateogrySerializer
+from .serializers import ProductSerializer, CategorySerializer
 
 
 def product_list():
@@ -51,7 +51,7 @@ def product_update(p_id):
     return product_detail(p_id)
 
 def category_create():
-    title = input('Введиет название категории: ')
+    title = input('Введите название категории: ')
     Category(title)
     return 'Категория успешно создана'
 

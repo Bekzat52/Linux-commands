@@ -1,7 +1,7 @@
 from abstract.serializers import BaseSerializer
 from .models import Category, Product, Comment
 
-class CateogrySerializer(BaseSerializer):
+class CategorySerializer(BaseSerializer):
     class Meta:
         fields = ['title']
         queryset = Category.object
